@@ -1,0 +1,68 @@
+.image1 {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* Style pour la superposition de texte */
+.overlay {
+    position: absolute;
+    left: 10%;
+    top: 20%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    color: white;
+    text-align: left;
+}
+
+/* Style du bouton avec dégradé de couleur */
+.gradient-button {
+    max-width: 10%;
+    background: linear-gradient(to right, #37ffd763, #f9f9f8);
+    /* Dégradé de couleur */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Lorsque le curseur survole le bouton */
+.gradient-button:hover {
+    background: linear-gradient(to right, #93b3d4, #a8d6fbc7);
+    /* Inversion des couleurs du dégradé */
+}
+
+.gradient-button1 {
+    max-width: 150%;
+    background: linear-gradient(to right, #0f35f363, #354eb3);
+    /* Dégradé de couleur */
+    border: none;
+    color: white;
+    padding: 20px 5px;
+    height: 60px;
+    /* Autres propriétés CSS pour le bouton... */
+    position: absolute;
+    right: 35%;
+    top: 450%;
+    transform: translate(0, -50%);
+
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Lorsque le curseur survole le bouton */
+.gradient-button1:hover {
+    background: linear-gradient(to right, #93b3d4, #a8d6fbc7);
+    /* Inversion des couleurs du dégradé */
+}
