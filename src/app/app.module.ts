@@ -12,12 +12,16 @@ import { TeamComponent } from './component/team/team.component';
 import{FormsModule,ReactiveFormsModule} from '@angular/forms'
 import { from } from 'rxjs';
 import { RouterModule, Routes } from '@angular/router';
+import { AdminModule } from './admin/admin.module';
 
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   // Autres routes
+ { path: 'admin',
+    loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule)
+}
 ];
 @NgModule({
   declarations: [
@@ -39,6 +43,7 @@ const routes: Routes = [
     // InMemoryWebApiModule.forRoot(DataService),
     RouterModule.forRoot(routes),// Configuration des routes
     // Autres modules
+    AdminModule,
 
   ],
   providers: [],

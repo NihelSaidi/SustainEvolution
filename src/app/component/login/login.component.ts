@@ -25,12 +25,12 @@ export class LoginComponent implements OnInit {
     console.log(this.user);
   
     // Simulation : Vérification des informations d'identification statiques
-   /* if (this.user.email === 'admin@example.com' && this.user.password === 'password') {
+   if (this.user.email === 'admin@example.com' && this.user.password === 'password') {
       // Rediriger vers la page du profil d'administrateur
-      this.router.navigate(['/admin']);
+      this.router.navigate(['/admin/dashboardAdmin']);
     } else {
       // Informations d'identification incorrectes
       this.notExist = true;
-    } */
+    } 
   }
 }
