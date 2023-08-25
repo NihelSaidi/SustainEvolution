@@ -15,7 +15,7 @@ export class LoginComponent {
   login() {
     // Vérification factice, pour des raisons de démonstration
     if (this.username === 'admin' && this.password === 'password') {
-      this.router.navigate(['/user-list']);
+      this.router.navigate(['/dashbord']);
     }
   }
 }
