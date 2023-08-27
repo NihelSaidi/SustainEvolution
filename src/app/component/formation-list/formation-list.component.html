@@ -1,0 +1,12 @@
+<div class="container">
+  <div *ngFor="let formation of formations" class="formation-item" (click)="showDetails(formation)">
+    {{ formation.name }}
+  </div>
+</div>
+
+<div *ngIf="selectedFormation" class="popup">
+  <h2>{{ selectedFormation.name }}</h2>
+  <p>{{ selectedFormation.description }}</p>
+  <button (click)="closeDetails()">Fermer</button>
+</div>
+
