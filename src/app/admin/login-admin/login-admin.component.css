@@ -1,0 +1,63 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Container */
+.login-container {
+ display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url('./nature.jpg'); /* Add background image URL */
+  background-size: cover; /* Adjust the image sizing */
+  background-position: center; /* Center the background image */
+}
+
+/* Label styling */
+.label {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color:black; /* Blue color */
+}
+
+/* Input field styling */
+.input-field {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 20%;
+  margin-bottom: 16px;
+}
+
+/* Button styling */
+.login-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #2ecc71; /* Green color */
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #27ae60; /* Darker green color on hover */
+}
+
+/* Center text */
+.text-center {
+  text-align: center;
+}
+/* Error message styling */
+.error-message {
+  color: #e74c3c; /* Red color for error message */
+  font-size: 16px;
+  margin-top: 10px;
+  text-align: center;
+  background-color: white;
+}
