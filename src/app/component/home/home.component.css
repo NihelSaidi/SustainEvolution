@@ -52,7 +52,7 @@
     /* Autres propriétés CSS pour le bouton... */
     position: absolute;
     right: 35%;
-    top: 450%;
+    top: 465%;
     transform: translate(0, -50%);
 
     font-size: 16px;
