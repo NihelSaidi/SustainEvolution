@@ -14,6 +14,8 @@ import { from } from 'rxjs';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminModule } from './admin/admin.module';
 import { FormationListComponent } from './component/formation-list/formation-list.component';
+import { PaymentComponent } from './component/payment/payment.component';
+import { VipComponent } from './component/vip/vip.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -34,6 +36,8 @@ const routes: Routes = [
     LoginComponent,
     TeamComponent,
     FormationListComponent,
+    PaymentComponent,
+    VipComponent,
    
   ],
   imports: [

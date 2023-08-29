@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+
 @Component({
   selector: 'app-formation-list',
   templateUrl: './formation-list.component.html',
