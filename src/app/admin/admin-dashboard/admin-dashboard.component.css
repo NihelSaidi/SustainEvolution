@@ -1,0 +1,15 @@
+.logo img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+/* admin-dashboard.component.css */
+.dashboard-content {
+    background-image: url('/../../assets/img/dash.jpg'); /* Adjust the path based on your folder structure */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* Additional styles for content area */
+  }
+  

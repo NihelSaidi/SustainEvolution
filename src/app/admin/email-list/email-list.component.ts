@@ -1,4 +1,4 @@
-// src/app/email-list/email-list.component.ts
+
 import { Component } from '@angular/core';
 
 @Component({

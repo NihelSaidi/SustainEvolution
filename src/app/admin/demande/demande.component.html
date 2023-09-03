@@ -1,0 +1,11 @@
+<div class="email-list">
+    <h3>Emails list</h3>
+    <br>
+    <br>
+    <div *ngFor="let email of emails" class="email">
+       <div (click)="redirectToAnotherPage()">
+      <p>From: {{ email.sender }}</p>
+      <p>Date: {{ email.date }}</p>
+      <p>{{ email.content }}</p></div>
+    </div>
+  </div>

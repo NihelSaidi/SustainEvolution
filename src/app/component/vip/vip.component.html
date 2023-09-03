@@ -1,1 +1,52 @@
-<p>vip works!</p>
+<div class="dashboard">
+  <div class="dashboard-header">
+    <h1>Dashbord VIP</h1>
+  </div>
+ 
+    <div class="experts-container">
+      <h2>Formations:</h2>
+      <ul>
+        <li  *ngFor="let formation of formations" class="formation-item" (click)="showFormationDetails(formation)">
+          {{ formation.name }}
+        </li>
+      </ul>
+    </div>
+    
+  
+  
+  <div class="experts-container">
+    <h2>Experts:</h2>
+    <ul>
+      <li *ngFor="let expert of experts" class="dashboard-item" (click)="showExpertDetails(expert)">
+        {{ expert.name }}
+      </li>
+    </ul>
+  </div>
+  
+  <div class="entreprises-container">
+    <h2>Entreprises:</h2>
+    <ul>
+      <li *ngFor="let entreprise of entreprises" class="dashboard-item" (click)="showEntrepriseDetails(entreprise)">
+        {{ entreprise.name }}
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div *ngIf="selectedFormation" class="popup">
+  <h2>{{ selectedFormation.name }}</h2>
+  <p>{{ selectedFormation.description }}</p>
+  <button class="btn btn-primary" (click)="closeDetails()">Fermer</button>
+</div>
+
+<div *ngIf="selectedExpert" class="popup">
+  <h2>{{ selectedExpert.name }}</h2>
+  <p>Spécialité: {{ selectedExpert.specialty }}</p>
+  <button class="btn btn-primary" (click)="closeDetails()">Fermer</button>
+</div>
+
+<div *ngIf="selectedEntreprise" class="popup">
+  <h2>{{ selectedEntreprise.name }}</h2>
+  <p>Emplacement: {{ selectedEntreprise.location }}</p>
+  <button class="btn btn-primary" (click)="closeDetails()">Fermer</button>
+</div>

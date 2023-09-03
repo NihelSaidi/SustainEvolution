@@ -1,18 +1,19 @@
 <app-header></app-header>
-  <form #loginForm="ngForm" (ngSubmit)="login()">
-    <div class="form-row">
-        <div class="form-group col-md-6">
-            <input type="email" class="form-control" id="inputEmail4" placeholder="Email *" [(ngModel)]="user.email" [ngModelOptions]="{standalone : true}">
-        </div>
-        <div class="form-group col-md-6">
-            <input type="password" class="form-control" id="inputPassword4"
-                placeholder="Password *" [(ngModel)]="user.password" [ngModelOptions]="{standalone : true}">
-        </div>
-        
+<div class="login-container">
+  <form #loginForm="ngForm" (ngSubmit)="login()" class="login-form">
+    <h2>Login</h2>
+    <div class="form-group">
+      <label for="inputEmail">Email</label>
+      <input type="email" class="form-control" id="inputEmail" placeholder="Enter your email" [(ngModel)]="user.email" [ngModelOptions]="{standalone : true}" required>
     </div>
-    <div class="regerv_btn">
-        <button class="btn_4" >Login</button>
-        <h1 *ngIf="notExist" class="text-danger">User not found</h1>
+    <div class="form-group">
+      <label for="inputPassword">Password</label>
+      <input type="password" class="form-control" id="inputPassword" placeholder="Enter your password" [(ngModel)]="user.password" [ngModelOptions]="{standalone : true}" required>
     </div>
-</form>
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary btn-block">Login</button>
+    </div>
+    <div *ngIf="notExist" class="alert alert-danger">User not found</div>
+  </form>
+</div>
 <app-footer></app-footer>

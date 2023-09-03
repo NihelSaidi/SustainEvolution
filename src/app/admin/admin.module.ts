@@ -7,7 +7,10 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
 import { LoginAdminComponent } from './login-admin/login-admin.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
-import { EmailListComponent } from './email-list/email-list.component';
+import { CreatUserComponent } from './creat-user/creat-user.component';
+import { DemandeComponent } from './demande/demande.component';
+import { CreatFormationComponent } from './creat-formation/creat-formation.component';
+import { CreatUserCsrComponent } from './creat-user-csr/creat-user-csr.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +18,10 @@ import { EmailListComponent } from './email-list/email-list.component';
     AdminHomeComponent,
     AdminDashboardComponent,
     LoginAdminComponent,
-    EmailListComponent,
+    CreatUserComponent,
+    DemandeComponent,
+    CreatFormationComponent,
+    CreatUserCsrComponent,
     // Other module imports if needed
   ],
   imports: [

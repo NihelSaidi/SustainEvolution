@@ -13,9 +13,11 @@ import{FormsModule,ReactiveFormsModule} from '@angular/forms'
 import { from } from 'rxjs';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminModule } from './admin/admin.module';
-import { FormationListComponent } from './component/formation-list/formation-list.component';
+import { DashboradUserComponent } from './component/dashborad-user/dashborad-user.component';
+import { DashboardUserCsrComponent } from './component/dashboard-user-csr/dashboard-user-csr.component';
 import { PaymentComponent } from './component/payment/payment.component';
 import { VipComponent } from './component/vip/vip.component';
+
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -28,6 +30,8 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
+    VipComponent,
+    PaymentComponent,
     HomeComponent,
     FooterComponent,
     HeaderComponent,
@@ -35,9 +39,8 @@ const routes: Routes = [
     AboutComponent,
     LoginComponent,
     TeamComponent,
-    FormationListComponent,
-    PaymentComponent,
-    VipComponent,
+    DashboradUserComponent,
+    DashboardUserCsrComponent,
    
   ],
   imports: [
