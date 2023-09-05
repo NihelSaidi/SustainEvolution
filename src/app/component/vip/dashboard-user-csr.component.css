@@ -1,0 +1,52 @@
+.dashboard {
+    padding: 0px;
+    padding-left: 0px;
+    background-image: url("src/assets/img/RSE.jpg");
+    background-repeat: no-repeat;
+background-size:800px 500px;
+background-position: right 35% bottom 90%;
+}
+.dashboard-header {
+    background-color: #1762b8; /* Vert turquoise Bootstrap */
+    color: white;
+    padding: 2px;
+    text-align: center;
+}
+h1 {
+    font-size: 24px;
+    
+    
+   /* Bleu Bootstrap */
+}
+h2 {
+    font-size: 20px;
+    margin-top: 10px;
+    padding: 20px;
+    color: #17A2B8; /* Vert turquoise Bootstrap */
+}
+ul {
+    list-style: none;
+    padding: 20px;
+}
+li {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+}
+li:hover {
+    background-color: #3eae81; /* Couleur de fond lorsqu'un élément est survolé */
+}
+li.selected {
+    background-color: #17A2B8; /* Couleur de fond pour l'élément sélectionné */
+    color: white; /* Couleur du texte pour l'élément sélectionné */
+}
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+    z-index: 999; /* Pour s'assurer que la pop-up est au-dessus de tout le reste */
+  }

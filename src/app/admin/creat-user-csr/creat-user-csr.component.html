@@ -8,7 +8,7 @@
 
                 <div class="row d-flex justify-content-center">
                     <div class="col-lg-8">
-                        <h2 class="fw-bold mb-5">Create csrUser</h2>
+                        <h2 class="fw-bold mb-5">Add new CSR User</h2>
                         <form #addPlatForm="ngForm" (ngSubmit)="addcsrUser()">
                             <!-- 2 column grid layout with text inputs for the Company Name -->
                             <div class="row">
@@ -17,7 +17,7 @@
                                     <div class="form-outline">
                                         <input type="text" class="form-control" id="inputEmail4"
                                             placeholder=" Company Name *" [(ngModel)]="csrUser.companyName"
-                                            [ngModelOptions]="{standalone : true}">
+                                            [ngModelOptions]="{standalone : true}" required>
                                     </div>
                                 </div>
                                 <div class="col-md-6 mb-4">
@@ -53,7 +53,7 @@
                                     <div class="form-outline">
                                         <label for="companyWebsite">Company Website</label>
                                         <input type="text" class="form-control" id="companyWebsite"
-                                            name="companyWebsite" [(ngModel)]="csrUser.companyWebsite">
+                                            name="companyWebsite" [(ngModel)]="csrUser.companyWebsite" required>
                                     </div>
                                 </div>
                             </div>
@@ -82,7 +82,7 @@
                                     <div class="form-outline">
                                         <label for="contactPhone">Contact Phone Number</label>
                                         <input type="number" class="form-control" id="contactPhone" name="contactPhone"
-                                            [(ngModel)]="csrUser.contactPhone">
+                                            [(ngModel)]="csrUser.contactPhone" required>
                                     </div>
                                 </div>
                                 <div class="col-md-6 mb-4">
@@ -102,17 +102,168 @@
                                 <div class="col-md-6 mb-4">
                                     <div class="form-outline">
                                         <input type="text-area" class="form-control" id="CSRGoals" placeholder="Specific CSR Goals" name="CSRGoals"
-                                            [(ngModel)]="csrUser.CSRGoals">
+                                            [(ngModel)]="csrUser.CSRGoals" required>
                                     </div>
                                 </div>
                                 <div class="col-md-6 mb-4">
                                     <div class="form-outline">
                                         <input type="text-area" class="form-control" id="CSRInitiatives" placeholder="Implemented CSR Initiatives" name="CSRInitiatives"
-                                            [(ngModel)]="csrUser.CSRInitiatives">
+                                            [(ngModel)]="csrUser.CSRInitiatives" required>
+                                    </div>
+                                </div>
+                                  <div class="col-md-6 mb-4">
+                                    <div class="form-outline">
+                                        <input type="text-area" class="form-control" id="SusDeveProj" placeholder="Sustainable Development Projects" name="SusDeveProj"
+                                            [(ngModel)]="csrUser.SusDeveProj" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <div class="form-outline">
+                                        <input type="text-area" class="form-control" id="SusDeveProj" placeholder="Sustainable Development Projects" name="SusDeveProj"
+                                            [(ngModel)]="csrUser.SusDeveProj" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                                <p>Environmental Practices</p>
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+                                    <div class="form-outline">
+                                        <input type="text-area" class="form-control" id="carbfootprintresmeas" placeholder="Carbon Footprint Reduction Measures" name="carbfootprintresmeas"
+                                            [(ngModel)]="csrUser.carbfootprintresmeas" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <div class="form-outline">
+                                        <input type="text-area" class="form-control" id="renewenergie" placeholder="Use of Renewable Energies" name="renewenergie"
+                                            [(ngModel)]="csrUser.renewenergie" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <div class="form-outline">
+                                        <input type="text-area" class="form-control" id="sustainmaterials" placeholder="Use of Sustainable Materials" name="sustainmaterials"
+                                            [(ngModel)]="csrUser.sustainmaterials" required>
                                     </div>
                                 </div>
                                
                             </div>
+                            <p>Social Engagement</p>
+                            <div class="row">
+
+                                <div class="col-md-6 mb-4">
+                                    <div class="form-outline">
+                                        <input type="text-area" class="form-control" id="comsupprog" placeholder="Community Support Programs" name="comsupprog"
+                                            [(ngModel)]="csrUser.comsupprog" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <div class="form-outline">
+                                        <input type="text-area" class="form-control" id="divincmeas" placeholder="Diversity and Inclusion Measures" name="divincmeas"
+                                            [(ngModel)]="csrUser.divincmeas" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <div class="form-outline">
+                                        <input type="text-area" class="form-control" id="estrainproj" placeholder="Educational or Training Projects" name="estrainproj"
+                                            [(ngModel)]="csrUser.estrainproj" required>
+                                    </div>
+                                </div>
+                                </div>
+                                <p>Business Ethics</p>
+                                <div class="row">
+                                    <div class="col-md-6 mb-4">
+                                        <div class="form-outline">
+                                            <input type="text-area" class="form-control" id="TransparencyEthicsPolicies" placeholder="Transparency and Ethics Policies" name="TransparencyEthicsPolicies"
+                                                [(ngModel)]="csrUser.TransparencyEthicsPolicies" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+                                        <div class="form-outline">
+                                            <input type="text-area" class="form-control" id="AntiCorrupGovMeas" placeholder="Anti-Corruption and Governance Measures" name="AntiCorrupGovMeas"
+                                                [(ngModel)]="csrUser.AntiCorrupGovMeas" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+                                        <div class="form-outline">
+                                            <input type="text-area" class="form-control" id="respecthumainrights" placeholder="Respect for Human Rights and Labor Standards" name="respecthumainrights"
+                                                [(ngModel)]="csrUser.respecthumainrights" required>
+                                        </div>
+                                    </div>
+                                </div>
+                             <p>Partnerships</p>
+                                <div class="row">
+                                    <div class="col-md-6 mb-4">
+                                        <div class="form-outline">
+                                            <input type="text-area" class="form-control" id="collaborations" placeholder="Collaborations with NGOs or Government Organizations" name="collaborations"
+                                                [(ngModel)]="csrUser.collaborations" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+                                        <div class="form-outline">
+                                            <input type="text-area" class="form-control" id="joinproj" placeholder="Joint Projects for Social or Environmental Causes" name="joinproj"
+                                                [(ngModel)]="csrUser.joinproj" required>
+                                        </div>
+                                    </div>
+                                </div>
+                             <p>CSR Reports</p>
+                                <div class="row">
+                                    <div class="col-md-6 mb-4">
+                                        <div class="form-outline">
+                                            <input type="text-area" class="form-control" id="Annualpub" placeholder="Annual Publications or Progress Reports" name="Annualpub"
+                                                [(ngModel)]="csrUser.Annualpub" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+                                        <div class="form-outline">
+                                            <input type="text-area" class="form-control" id="keyperform" placeholder="Key Performance Indicators" name="keyperform"
+                                                [(ngModel)]="csrUser.keyperform" required>
+                                        </div>
+                                    </div>
+
+
+
+                                    </div>
+                                    <p>Sustainable Innovations</p>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-4">
+                                            <div class="form-outline">
+                                                <input type="text-area" class="form-control" id="envfriendlyprodserv" placeholder="Environmentally Friendly Products or Services" name="envfriendlyprodserv"
+                                                    [(ngModel)]="csrUser.envfriendlyprodserv" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-4">
+                                            <div class="form-outline">
+                                                <input type="text-area" class="form-control" id="innovatech" placeholder="Innovative Technologies for Sustainability" name="innovatech"
+                                                    [(ngModel)]="csrUser.innovatech" required>
+                                            </div>
+                                        </div>
+    
+    
+    
+                                        </div>
+                                        <p>Impact Measurements</p>
+                                        <div class="row">
+                                            <div class="col-md-6 mb-4">
+                                                <div class="form-outline">
+                                                    <input type="text-area" class="form-control" id="quantitativemeasur" placeholder="Quantitative Measurements" name="quantitativemeasur"
+                                                        [(ngModel)]="csrUser.quantitativemeasur" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 mb-4">
+                                                <div class="form-outline">
+                                                    <input type="text-area" class="form-control" id="TestCaseStudies" placeholder="Testimonials or Case Studies" name="TestCaseStudies"
+                                                        [(ngModel)]="csrUser.TestCaseStudies" required>
+                                                </div>
+                                            </div>
+        
+        
+        
+                                            </div>
+
+
+ 
+                                 
+
 
 
 
@@ -123,8 +274,7 @@
                                     <label for="temporaryPassword">Temporary Password</label>
                                     <input type="text" class="form-control" id="temporaryPassword"
                                         name="temporaryPassword" [(ngModel)]="csrUser.temporaryPassword" readonly>
-
-                                </div>
+                                    </div>
                                 <div class="col-md-6 mb-4">
                                     <button type="button" class="btn btn-info"
                                         (click)="generateAndSendTemporaryPassword()"> Send
@@ -141,38 +291,8 @@
                         </form>
                     </div>
                 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            </div>
-        </div>
+            </div>    
+          </div>
         <!-- Background image -->
 
     </div>

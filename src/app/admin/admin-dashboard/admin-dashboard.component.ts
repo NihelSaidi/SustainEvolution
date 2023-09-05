@@ -18,6 +18,12 @@ export class AdminDashboardComponent {
   
     console.log(this.users);
     console.log(this.formations);
+  }  
+  isAuthenticated: boolean = false;
+
+  logout() {
+    // Logique de déconnexion ici
+    this.isAuthenticated = false;
   }
   
  

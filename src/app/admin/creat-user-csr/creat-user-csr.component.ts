@@ -41,14 +41,33 @@ export class CreatUserCsrComponent {
         companySize: [''],
         address: [''],
         country: [''],
-        companyWebsite: [''], // Add the company website control
-        contactPerson: [''], // Add the contact person control
-        contactEmail: [''], // Add the contact email control
-        contactPhone: [''], // Add the contact phone control
-        userRole: [''] ,// Add the user role control
-        CSRGoals:[''],
+        companyWebsite: [''],
+        contactPerson: [''],
+        contactEmail: [''],
+        contactPhone: [''],
+        userRole: [''],
+        CSRGoals: [''],
         temporaryPassword: [''],
-        CSRInitiatives:[''],
+        CSRInitiatives: [''],
+        // Add new attributes to the form
+        SusDeveProj: [''],
+        carbfootprintresmeas: [''],
+        renewenergie: [''],
+        sustainmaterials: [''],
+        comsupprog: [''],
+        divincmeas: [''],
+        estrainproj: [''],
+        TransparencyEthicsPolicies: [''],
+        AntiCorrupGovMeas: [''],
+        respecthumainrights: [''],
+        collaborations: [''],
+        joinproj: [''],
+        Annualpub: [''],
+        keyperform: [''],
+        envfriendlyprodserv: [''],
+        innovatech: [''],
+        quantitativemeasur: [''],
+        TestCaseStudies: [''],
       })
     }
 

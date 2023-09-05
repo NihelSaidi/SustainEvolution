@@ -156,23 +156,24 @@
 
                 <div class="row d-flex justify-content-center">
                     <div class="col-lg-8">
-                        <h2 class="fw-bold mb-5">Create User</h2>
+                        <h2 class="fw-bold mb-5">Add new User</h2>
                         <form #addPlatForm="ngForm" (ngSubmit)="addUser()">
                             <!-- 2 column grid layout with text inputs for the Company Name -->
                             <div class="row">
                                 <div class="col-md-6 mb-4">
                                     <div class="form-outline">
-                                        <label class="form-label" for="form3Example1">Company Name</label>
+                                        <label class="form-label" for="form3Example1"></label>
                                         <input type="text" class="form-control" id="inputEmail4"
                                             placeholder=" Company Name *" [(ngModel)]="user.companyName"
-                                            [ngModelOptions]="{standalone : true}">
+                                            [ngModelOptions]="{standalone : true}"  required>
+                                            
                                     </div>
                                 </div>
                                 <div class="col-md-6 mb-4">
                                     <div class="form-outline">
                                         <label for="industrySector">Industry Sector *</label>
                                         <select class="form-select" id="industrySector" name="industrySector"
-                                            [(ngModel)]="user.industrySector" required>
+                                            [(ngModel)]="user.industrySector" required >
                                             <option value="" disabled selected>Select Industry Sector</option>
                                             <option value="Technology">Technology</option>
                                             <option value="Services">Services</option>
@@ -188,7 +189,7 @@
                                     <div class="form-outline">
                                         <label for="companySize">Company Size *</label>
                                         <select class="form-select" id="companySize" name="companySize"
-                                            [(ngModel)]="user.companySize" required>
+                                            [(ngModel)]="user.companySize"  required>
                                             <option value="" disabled selected>Select Company Size</option>
                                             <option value="Micro-enterprise">Micro-enterprise (less than 10 employees)
                                             </option>
@@ -200,9 +201,9 @@
                                 </div>
                                 <div class="col-md-6 mb-4">
                                     <div class="form-outline">
-                                        <label for="companyWebsite">Company Website</label>
+                                        <label for="companyWebsite"></label>
                                         <input type="text" class="form-control" id="companyWebsite"
-                                            name="companyWebsite" [(ngModel)]="user.companyWebsite">
+                                          placeholder="Company Website"  name="companyWebsite" [(ngModel)]="user.companyWebsite" required>
                                     </div>
                                 </div>
                             </div>
@@ -210,15 +211,15 @@
                             <div class="row">
                                 <div class="col-md-6 mb-4">
                                     <div class="form-outline">
-                                        <label for="contactPerson">Contact Person *</label>
-                                        <input type="text" class="form-control" id="contactPerson" name="contactPerson"
+                                        <label for="contactPerson"></label>
+                                        <input type="text" class="form-control" placeholder="Contact Person *" id="contactPerson" name="contactPerson"
                                             [(ngModel)]="user.contactPerson" required>
                                     </div>
                                 </div>
                                 <div class="col-md-6 mb-4">
                                     <div class="form-outline">
-                                        <label for="contactEmail">Contact Email Address *</label>
-                                        <input type="email" class="form-control" id="contactEmail" name="contactEmail"
+                                        <label for="contactEmail"></label>
+                                        <input type="email" class="form-control" placeholder="Contact Email Address *" id="contactEmail" name="contactEmail"
                                             [(ngModel)]="user.contactEmail" required>
                                     </div>
                                 </div>
@@ -229,9 +230,9 @@
                             <div class="row">
                                 <div class="col-md-6 mb-4">
                                     <div class="form-outline">
-                                        <label for="contactPhone">Contact Phone Number</label>
-                                        <input type="number" class="form-control" id="contactPhone" name="contactPhone"
-                                            [(ngModel)]="user.contactPhone">
+                                        <label for="contactPhone"></label>
+                                        <input type="number" class="form-control" placeholder="Contact Phone Number" id="contactPhone" name="contactPhone"
+                                            [(ngModel)]="user.contactPhone" required>
                                     </div>
                                 </div>
                                 <div class="col-md-6 mb-4">
@@ -254,7 +255,7 @@
                             <div class="row">
                                 <div class="col-md-6 mb-4">
                                     <input type="text" class="form-control" id="password"
-                                        placeholder='Password' name="password" [(ngModel)]="user.password" readonly>
+                                        placeholder='Password' name="password" [(ngModel)]="user.password" readonly required>
 
                                 </div>
                                 <div class="col-md-6 mb-4">
@@ -264,7 +265,7 @@
                                 </div>
                             </div>
                             <!-- Submit button -->
-                            <button class="gradient-button">
+                            <button type="submit" class="gradient-button">
                                 Add
                             </button>
 

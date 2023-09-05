@@ -251,7 +251,7 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+                        
                         <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-info shadow-sm"><i
                                 class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
                     </div>
@@ -266,8 +266,8 @@
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                                Subsribers (Monthly)</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">$40,000</div>
+                                                Total subscribe amounts</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">1500 dt </div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-calendar fa-2x text-gray-300"></i>
@@ -284,8 +284,8 @@
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                                Subsribers (Annual)</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">$215,000</div>
+                                                Total subscribers</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">10</div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
@@ -347,165 +347,77 @@
 
                     <!-- Free and not CSR -->
 
-                    <div class="row">
-
-                        <!-- Area Chart -->
-                        <div class="col-xl-8 col-lg-7">
-                            <!--::regervation_part start::-->
-                            
-                                    <div class="row">
-                                        <div class="col-xl-5">
-                                            <div class="section_tittle">
-                                                <h6 class="m-0 font-weight-bold text-info">Companies</h6>
-                        
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-lg-12">
-                                            <div class="regervation_part_iner">
-
-                                                <table class="table table-hover table-bordered ">
-                                                    <tr class="m-0 font-weight-bold text-black">
-                                                        <th>Company Name</th>
-                                                        <th>Industry Sector *</th>
-                                                       
-                                                    </tr>
-                                                    <tr *ngFor="let p of users" class="text-dark">
-                                                        <td>{{p.companyName}}</td>
-                                                        <td>{{p.industrySector}}</td>
-                                                       
-
-
-                                                    </tr>
-                                                </table>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                            
-                            <!--::regervation_part end::-->
-                        </div>
-
-                        <!-- Pie Chart -->
-                        <div class="col-xl-4 col-lg-5">
-                                <!-- Card Header - Dropdown -->
-                                <div>
-                                    <div class="row">
-                                        <div class="col-xl-8">
-                                            <div class="section_tittle ">
-                                                <h6 class="m-0 font-weight-bold text-black"> Training available</h6>
-                        
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-lg-8">
-                                            <div class="regervation_part_iner">
-
-                                                <table class="table table-hover table-bordered ">
-                                                    <tr class="m-0 font-weight-bold text-black">
-                                                        <th>Name</th>
-                                                        <th>type</th>
-                                                        
-                                                    </tr>
-                                                    <tr *ngFor="let m of formations" class="text-white">
-                                                        <td>{{m.formationName}}</td>
-                                                       
-
-
-                                                    </tr>
-                                                </table>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                        </div>
-                    </div>
-                    <!--Paid and CSR-->
-
-                    <div class="row">
-
-                        <!-- Area Chart -->
-                        <div class="col-xl-8 col-lg-7">
-                            <!--::regervation_part start::-->
-                            
-                                    <div class="row">
-                                        <div class="col-xl-5">
-                                            <div class="section_tittle">
-                                                <h6 class="m-0 font-weight-bold text-info">Companies CSR</h6>
-                        
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-lg-12">
-                                            <div class="regervation_part_iner">
-
-                                                <table class="table table-hover table-bordered ">
-                                                    <tr class="m-0 font-weight-bold text-black">
-                                                        <th>Company Name</th>
-                                                        <th>Industry Sector *</th>
-                                                       
-                                                    </tr>
-                                                    <tr *ngFor="let p of users" class="text-dark">
-                                                        <td>{{p.companyName}}</td>
-                                                        <td>{{p.industrySector}}</td>
-                                                       
-
-
-                                                    </tr>
-                                                </table>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                            
-                            <!--::regervation_part end::-->
-                        </div>
-
-                        <!-- Pie Chart -->
-                        <div class="col-xl-4 col-lg-5">
-                                <!-- Card Header - Dropdown -->
-                                <div>
-                                    <div class="row">
-                                        <div class="col-xl-8">
-                                            <div class="section_tittle ">
-                                                <h6 class="m-0 font-weight-bold text-black"> Training available Paid</h6>
-                        
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-lg-8">
-                                            <div class="regervation_part_iner">
-
-                                                <table class="table table-hover table-bordered ">
-                                                    <tr class="m-0 font-weight-bold text-black">
-                                                        <th>Name</th>
-                                                        <th>type</th>
-                                                        
-                                                    </tr>
-                                                    <tr *ngFor="let m of formations" class="text-white">
-                                                        <td>{{m.formationName}}</td>
-                                                       
-
-
-                                                    </tr>
-                                                </table>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                        </div>
-                    </div>
-
-
+                    <main>
+                        <section class="company-section">
+                            <h2 class="section-title">Companies</h2>
+                            <table class="table table-hover table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Company Name</th>
+                                        <th>Industry Sector *</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let p of users">
+                                        <td>{{p.companyName}}</td>
+                                        <td>{{p.industrySector}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </section>
                 
+                        <section class="training-section">
+                            <h2 class="section-title">Training available</h2>
+                            <table class="table table-hover table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Type</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let m of formations">
+                                        <td>{{m.formationName}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </section>
+                
+                        <section class="company-csr-section">
+                            <h2 class="section-title">Companies CSR</h2>
+                            <table class="table table-hover table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Company Name</th>
+                                        <th>Industry Sector *</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let p of users">
+                                        <td>{{p.companyName}}</td>
+                                        <td>{{p.industrySector}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </section>
+                
+                        <section class="training-paid-section">
+                            <h2 class="section-title">Training available Paid</h2>
+                            <table class="table table-hover table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Type</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let m of formations">
+                                        <td>{{m.formationName}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </section>
+                    </main>
                     <div class="row">
 
                         <!-- Content Column -->

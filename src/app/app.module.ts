@@ -14,7 +14,8 @@ import { from } from 'rxjs';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminModule } from './admin/admin.module';
 import { DashboradUserComponent } from './component/dashborad-user/dashborad-user.component';
-import { DashboardUserCsrComponent } from './component/dashboard-user-csr/dashboard-user-csr.component';
+import { DashboardUserCsrComponent } from './component/vip/dashboard-user-csr.component';
+import { PayComponent } from './component/pay/pay.component';
 
 
 const routes: Routes = [
@@ -37,6 +38,7 @@ const routes: Routes = [
     TeamComponent,
     DashboradUserComponent,
     DashboardUserCsrComponent,
+    PayComponent,
    
   ],
   imports: [
