@@ -17,6 +17,7 @@ import { DashboradUserComponent } from './component/dashborad-user/dashborad-use
 import { DashboardUserCsrComponent } from './component/dashboard-user-csr/dashboard-user-csr.component';
 import { PaymentComponent } from './component/payment/payment.component';
 import { VipComponent } from './component/vip/vip.component';
+import { ContactusComponent } from './contactus/contactus.component';
 
 
 const routes: Routes = [
@@ -41,6 +42,7 @@ const routes: Routes = [
     TeamComponent,
     DashboradUserComponent,
     DashboardUserCsrComponent,
+    ContactusComponent,
    
   ],
   imports: [

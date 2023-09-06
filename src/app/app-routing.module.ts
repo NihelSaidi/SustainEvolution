@@ -9,6 +9,7 @@ import { DashboardUserCsrComponent } from './component/dashboard-user-csr/dashbo
 import { DashboradUserComponent } from './component/dashborad-user/dashborad-user.component';
 import { PaymentComponent } from './component/payment/payment.component';
 import { VipComponent } from './component/vip/vip.component';
+import { ContactusComponent } from './contactus/contactus.component';
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path:'about',component:AboutComponent},
@@ -18,6 +19,7 @@ const routes: Routes = [
   {path:'dashboardCsr',component:DashboardUserCsrComponent},
   {path:'dashboardUser',component:DashboradUserComponent},
   {path:'vip',component:VipComponent},
+  {path:'contactus',component:ContactusComponent},
   {path:'payment',component:PaymentComponent},
   
 ];
