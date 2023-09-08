@@ -1,17 +1,35 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-vip',
   templateUrl: './vip.component.html',
   styleUrls: ['./vip.component.css']
 })
 export class VipComponent  {
-  formations = [
-    { id: 1, name: 'Formation 1', description: 'Description de la formation 1.' },
-    { id: 2, name: 'Formation 2', description: 'Description de la formation 2.' },
-    // ... Ajoutez d'autres formations ici
-  ];
+  connectedUser :any;
+  formations:any;
+  csrUsers : any;
 
+  constructor(private router : Router) { }
+
+
+  ngOnInit() {
+    // Retrieve user data from local storage
+    this.csrUsers = JSON.parse(localStorage.getItem('csrUsers') || "[]");
+    this.connectedUser = JSON.parse(localStorage.getItem("connectedUser") || "{}");
+  
+    console.log(this.csrUsers);
+    console.log(this.formations);
+  }  
+  isAuthenticated: boolean = false;
+
+  logout() {
+    // Logique de déconnexion ici
+    this.isAuthenticated = false;
+  }
+  
+ 
   experts = [
     { id: 1, name: 'Expert 1', specialty: 'Spécialité de l\'expert 1' },
     { id: 2, name: 'Expert 2', specialty: 'Spécialité de l\'expert 2' },
@@ -23,7 +41,6 @@ export class VipComponent  {
     { id: 2, name: 'Entreprise 2', location: 'Emplacement de l\'entreprise 2' },
     // ... Ajoutez d'autres entreprises ici
   ];
-
   selectedFormation: any;
   selectedExpert: any;
   selectedEntreprise: any;

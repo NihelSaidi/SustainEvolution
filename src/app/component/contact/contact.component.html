@@ -1,4 +1,338 @@
 <app-header></app-header>
+<br>
+<br>
+<section class="ftco-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="wrapper img" 
+                    style="background-image: url(../../../assets/img/14.png);background-size: cover; /* Adjust this based on your preference */
+                    background-position: center center;
+                    width: 900px;
+                          height: 500px;">
+                    <div class="row">
+                        <div class="col-md-9 col-lg-7">
+                            <!-- Formulaire de demande de création de compte -->
+                            <form [formGroup]="accountForm" (ngSubmit)="onSubmit()" class="contactForm">
 
-<p>contact works!</p>
-<app-footer></app-footer>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="form-label" for="companyName">Company Name *</label>
+                                            <input type="text" class="form-control" id="companyName"
+                                                formControlName="companyName" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="industrySector">Industry Sector *</label>
+                                            <select class="form-select" id="industrySector"
+                                                formControlName="industrySector" required>
+                                                <option value="" disabled selected>Select Industry Sector</option>
+                                                <option value="Technology">Technology</option>
+                                                <option value="Services">Services</option>
+                                                <option value="Agri-food">Agri-food</option>
+                                                <option value="Other">Other</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="companySize">Company Size *</label>
+                                            <select class="form-select" id="companySize" formControlName="companySize"
+                                                required>
+                                                <option value="" disabled selected>Select Company Size</option>
+                                                <option value="Micro-enterprise">Micro-enterprise (less than 10
+                                                    employees)</option>
+                                                <option value="Small business">Small business (10-50 employees)</option>
+                                                <option value="Medium business">Medium business (50-250 employees)
+                                                </option>
+                                                <option value="Large business">Large business (over 250 employees)
+                                                </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 ">
+                                        <div class="form-group">
+                                            <label for="companyWebsite">Company Website</label>
+                                            <input type="text" class="form-control" id="companyWebsite"
+                                                formControlName="companyWebsite" required>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6  ">
+                                        <div class="form-group">
+                                            <label for="contactPerson">Contact Person *</label>
+                                            <input type="text" class="form-control" id="contactPerson"
+                                                formControlName="contactPerson" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 ">
+                                        <div class="form-group">
+                                            <label for="contactEmail">Contact Email Address *</label>
+                                            <input type="email" class="form-control" id="contactEmail"
+                                                formControlName="contactEmail" required>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6 ">
+                                        <div class="form-group">
+                                            <label for="contactPhone">Contact Phone Number</label>
+                                            <input type="number" class="form-control" id="contactPhone"
+                                                formControlName="contactPhone" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6  ">
+                                        <label for="userRole">User Role *</label>
+                                        <select class="form-select" id="userRole" formControlName="userRole" required>
+                                            <option value="" disabled selected>Select User Role</option>
+                                            <option value="Administrator">Administrator</option>
+                                            <option value="Member">Member</option>
+                                            <option value="Project Manager">Project Manager</option>
+                                            <option value="Consultant">Consultant</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Est-ce que votre entreprise est impliquée dans la RSE ?</label>
+                                    <div>
+                                        <label>
+                                            <input type="radio" formControlName="isRSE" value="oui"> Oui
+                                        </label>
+                                        <label>
+                                            <input type="radio" formControlName="isRSE" value="non"> Non
+                                        </label>
+                                    </div>
+                                </div>
+                                <span *ngIf="accountForm?.get('isRSE')?.value === 'oui'">
+
+                                    <!-- Questions RSE -->
+                                    <!-- Questions RSE -->
+                                    <p>CSR Commitments</p>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="text-area" class="form-control" id="CSRGoals"
+                                                    placeholder="Specific CSR Goals" name="CSRGoals"
+                                                    formControlName="CSRGoals" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="text-area" class="form-control" id="CSRInitiatives"
+                                                    placeholder="Implemented CSR Initiatives" name="CSRInitiatives"
+                                                    formControlName="CSRInitiatives" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="text-area" class="form-control" id="SusDeveProj"
+                                                    placeholder="Sustainable Development Projects" name="SusDeveProj"
+                                                    formControlName="SusDeveProj" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="text-area" class="form-control" id="SusDeveProj"
+                                                    placeholder="Sustainable Development Projects" name="SusDeveProj"
+                                                    formControlName="SusDeveProj" required>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <p>Environmental Practices</p>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="text-area" class="form-control" id="carbfootprintresmeas"
+                                                    placeholder="Carbon Footprint Reduction Measures"
+                                                    name="carbfootprintresmeas" formControlName="carbfootprintresmeas"
+                                                    required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="text-area" class="form-control" id="renewenergie"
+                                                    placeholder="Use of Renewable Energies" name="renewenergie"
+                                                    formControlName="renewenergie" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="text-area" class="form-control" id="sustainmaterials"
+                                                    placeholder="Use of Sustainable Materials" name="sustainmaterials"
+                                                    formControlName="sustainmaterials" required>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <p>Social Engagement</p>
+                                    <div class="row">
+
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="text-area" class="form-control" id="comsupprog"
+                                                    placeholder="Community Support Programs" name="comsupprog"
+                                                    formControlName="comsupprog" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="text-area" class="form-control" id="divincmeas"
+                                                    placeholder="Diversity and Inclusion Measures" name="divincmeas"
+                                                    formControlName="divincmeas" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="text-area" class="form-control" id="estrainproj"
+                                                    placeholder="Educational or Training Projects" name="estrainproj"
+                                                    formControlName="estrainproj" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p>Business Ethics</p>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="text-area" class="form-control"
+                                                    id="TransparencyEthicsPolicies"
+                                                    placeholder="Transparency and Ethics Policies"
+                                                    name="TransparencyEthicsPolicies"
+                                                    formControlName="TransparencyEthicsPolicies" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="text-area" class="form-control" id="AntiCorrupGovMeas"
+                                                    placeholder="Anti-Corruption and Governance Measures"
+                                                    name="AntiCorrupGovMeas" formControlName="AntiCorrupGovMeas"
+                                                    required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="text-area" class="form-control" id="respecthumainrights"
+                                                    placeholder="Respect for Human Rights and Labor Standards"
+                                                    name="respecthumainrights" formControlName="respecthumainrights"
+                                                    required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p>Partnerships</p>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="text-area" class="form-control" id="collaborations"
+                                                    placeholder="Collaborations with NGOs or Government Organizations"
+                                                    name="collaborations" formControlName="collaborations" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="text-area" class="form-control" id="joinproj"
+                                                    placeholder="Joint Projects for Social or Environmental Causes"
+                                                    name="joinproj" formControlName="joinproj" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p>CSR Reports</p>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="text-area" class="form-control" id="Annualpub"
+                                                    placeholder="Annual Publications or Progress Reports"
+                                                    name="Annualpub" formControlName="Annualpub" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="text-area" class="form-control" id="keyperform"
+                                                    placeholder="Key Performance Indicators" name="keyperform"
+                                                    formControlName="keyperform" required>
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+                                    <p>Sustainable Innovations</p>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="text-area" class="form-control" id="envfriendlyprodserv"
+                                                    placeholder="Environmentally Friendly Products or Services"
+                                                    name="envfriendlyprodserv" formControlName="envfriendlyprodserv"
+                                                    required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="text-area" class="form-control" id="innovatech"
+                                                    placeholder="Innovative Technologies for Sustainability"
+                                                    name="innovatech" formControlName="innovatech" required>
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+                                    <p>Impact Measurements</p>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="text-area" class="form-control" id="quantitativemeasur"
+                                                    placeholder="Quantitative Measurements" name="quantitativemeasur"
+                                                    formControlName="quantitativemeasur" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="text-area" class="form-control" id="TestCaseStudies"
+                                                    placeholder="Testimonials or Case Studies" name="TestCaseStudies"
+                                                    formControlName="TestCaseStudies" required>
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+
+                                </span>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <button type="submit" class="btn btn-success" (click)="addUser()"> Send
+                                            Email</button>
+                                    </div>
+                                </div>
+                                <br>
+                                <!-- </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+
+                                <!-- Autres questions du formulaire -->
+                                <!-- ... Ajoutez d'autres questions générales ici ... -->
+
+                                <!-- Bouton de soumission du formulaire -->
+
+                            </form>
+
+                        </div>
+                    </div>
+
+                    <!-- </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section><app-footer></app-footer>

@@ -16,13 +16,13 @@ export class DemandeComponent {
 
   emails = [
     {
-      sender: 'mouhamed@gmail.com',
+      sender: 'johndoe@abcinc.com',
       date: '2023-08-27',
-      content: "informations de compte"
+      content: "Information  "
     },{
-      sender: 'amine@gmail.com',
+      sender: 'user.david@gmail.com',
       date: '2023-08-27',
-      content: "informations de compte"
+      content: "Information"
     },
   ];
 }

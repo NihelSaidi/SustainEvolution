@@ -9,11 +9,12 @@
 /* Style pour la superposition de texte */
 .overlay {
     position: absolute;
-    left: 10%;
-    top: 20%;
     width: 100%;
     height: 100%;
     display: flex;
+    top: 12%;
+    left: 60%;
+    transform: translate(-50%, -50%);
     flex-direction: column;
     justify-content: center;
     align-items: left;
@@ -52,7 +53,7 @@
     /* Autres propriétés CSS pour le bouton... */
     position: absolute;
     right: 35%;
-    top: 465%;
+    top: 2700px;
     transform: translate(0, -50%);
 
     font-size: 16px;

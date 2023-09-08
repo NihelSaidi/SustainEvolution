@@ -1,7 +1,6 @@
 .dashboard {
     padding: 0px;
     padding-left: 0px;
-    background-image: url("src/assets/img/RSE.jpg");
     background-repeat: no-repeat;
 background-size:800px 500px;
 background-position: right 35% bottom 90%;
@@ -50,3 +49,97 @@ li.selected {
     border-bottom: 1px solid #ddd;
     z-index: 999; /* Pour s'assurer que la pop-up est au-dessus de tout le reste */
   }
+  .logo img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+/* admin-dashboard.component.css */
+.dashboard-content {
+    background-image: url('/../assets/img/10 .jpg'); /* Adjust the path based on your folder structure */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* Additional styles for content area */
+  }
+  main {
+    padding: 20px;
+}
+
+.section-title {
+    color: rgb(41, 46, 41);
+}
+
+table {
+    background-color: white;
+    color: black;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: rgba(43, 214, 43, 0.705);
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: green;
+    color: white;
+}
+
+.card {
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.06);
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 0 solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+}
+
+.card-body {
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 1rem;
+}
+.icon{
+    width: 5%;
+    height: 50%;
+}
+
+
+body{
+    background-color: white;
+}
+.gradient-button {
+    max-width: 20%;
+    background: linear-gradient(to right, #00f49b63, #0e873b);
+    /* Dégradé de couleur */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 400px;
+    margin-left: 100px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Lorsque le curseur survole le bouton */
+.gradient-button:hover {
+    background: linear-gradient(to right, #93b3d4, #a8d6fbc7);
+    /* Inversion des couleurs du dégradé */
+}

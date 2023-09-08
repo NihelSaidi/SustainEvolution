@@ -14,27 +14,8 @@ export class CreatUserComponent {
   title2: any;
   id: any;
 
-  constructor(private formBuilder: FormBuilder, private activatedRoute: ActivatedRoute) { }
-
-  ngOnInit() {
-
-    this.id = this.activatedRoute.snapshot.paramMap.get("id");
-
-    this.users = JSON.parse(localStorage.getItem("users") || "[]");
-
-    if (this.id) {
-      this.title = "edit user"
-      this.title2 = "edit"
-      for (let i = 0; i < this.users.length; i++) {
-         
-       }
-      
-
-    }
-    else {
-      this.title = "add user";
-      this.title2 = "add user";
-      this.addPlatForm = this.formBuilder.group({
+constructor(private formBuilder: FormBuilder, private activatedRoute: ActivatedRoute) {
+   this.addPlatForm = this.formBuilder.group({
         companyName: [''],
         industrySector: [''],
         companySize: [''],
@@ -47,11 +28,15 @@ export class CreatUserComponent {
         userRole: [''] ,// Add the user role control
         password: [''],
       })
-    }
-
-
-
+    ;
+}
+ ngOnInit() {
+  const users = JSON.parse(localStorage.getItem('users')||"[]");
+  if (users) {
+    this.addPlatForm.patchValue(users); // Patch the form values
   }
+}
+
   generateRandomPassword(): string {
     const length = 8; // Length of the password
     const charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
@@ -82,22 +67,9 @@ export class CreatUserComponent {
     this.user.get('password')?.setValue(randomPassword);  
   }
   addUser() {
-    if (!this.id) {
-      // Generating a temporary password
-      const temporaryPassword = this.generateRandomPassword(); // Replace with your password generation logic
-      this.user.password = temporaryPassword;
-  
-      // Other code to add the user to the local storage
-      this.users = JSON.parse(localStorage.getItem("users") || "[]");
-      let idUser = JSON.parse(localStorage.getItem("idUser") || "1");
-      this.user.id = idUser;
-  
-      this.users.push(this.user);
-  
-      localStorage.setItem("users", JSON.stringify(this.users));
-      localStorage.setItem("idUser", idUser + 1);
-    }
-  }
+  localStorage.setItem('users', JSON.stringify(this.addPlatForm.value));
+}
+
   
   
   

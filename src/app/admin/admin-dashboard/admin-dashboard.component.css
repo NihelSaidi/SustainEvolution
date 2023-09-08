@@ -17,7 +17,7 @@
 }
 
 .section-title {
-    color: green;
+    color: rgb(41, 46, 41);
 }
 
 table {
@@ -33,7 +33,7 @@ th, td {
 }
 
 th {
-    background-color: green;
+    background-color: rgba(43, 214, 43, 0.705);
     color: white;
 }
 
@@ -42,4 +42,33 @@ tr:nth-child(even) {
     color: white;
 }
 
-  
+.card {
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.06);
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 0 solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+}
+
+.card-body {
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 1rem;
+}
+.icon{
+    width: 5%;
+    height: 50%;
+}
+
+
+body{
+    background-color: white;
+}
