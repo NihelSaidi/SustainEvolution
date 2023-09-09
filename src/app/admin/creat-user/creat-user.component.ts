@@ -8,7 +8,16 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class CreatUserComponent {
   addPlatForm!: FormGroup;
-  user: any = {};
+  user: any = {
+    companyName: 'ABC inc.',
+    industrySector: 'Technology',
+    companySize: 'Medium business',
+    companyWebsite: 'www.abcinc.com',
+    contactPerson: 'John Doe',
+    contactEmail: 'johndoe@abcinc.com',
+    contactPhone: 1234567890,
+    userRole: 'Administrator', // Vous pouvez définir un mot de passe par défaut ici
+  };
   users: any;
   title: any;
   title2: any;
@@ -37,18 +46,18 @@ constructor(private formBuilder: FormBuilder, private activatedRoute: ActivatedR
   }
 }
 
-  generateRandomPassword(): string {
-    const length = 8; // Length of the password
-    const charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-    let password = "";
-  
-    for (let i = 0; i < length; i++) {
-      const randomIndex = Math.floor(Math.random() * charset.length);
-      password += charset.charAt(randomIndex);
-    }
-  
-    return password;
+generateRandomPassword(): string {
+  const length = 8; // Length of the password
+  const charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+  let password = "";
+
+  for (let i = 0; i < length; i++) {
+    const randomIndex = Math.floor(Math.random() * charset.length);
+    password += charset.charAt(randomIndex);
   }
+
+  return password;
+}
   sendEmail(email: string, subject: string, message: string): void {
     // This is a mock implementation, replace with your actual email sending logic
     console.log(`Sending email to ${email}`);
@@ -69,14 +78,5 @@ constructor(private formBuilder: FormBuilder, private activatedRoute: ActivatedR
   addUser() {
   localStorage.setItem('users', JSON.stringify(this.addPlatForm.value));
 }
-
-  
-  
-  
-  
-  
-  
-  
- 
 
 }
