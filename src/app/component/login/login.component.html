@@ -1,19 +1,70 @@
 <app-header></app-header>
-<div class="login-container">
-  <form #loginForm="ngForm" (ngSubmit)="login()" class="login-form">
-    <h2>Login</h2>
-    <div class="form-group">
-      <label for="inputEmail">Email</label>
-      <input type="email" class="form-control" id="inputEmail" placeholder="Enter your email" [(ngModel)]="user.email" [ngModelOptions]="{standalone : true}" required>
+<section class="vh-100">
+  <div class="container-fluid h-custom">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-md-9 col-lg-6 col-xl-5">
+        <img  style="background-image: url('/../assets/img/12.png');
+        background-size: cover; /* Adjust this based on your preference */
+        background-position: center center;
+        width: 1100px;
+              height: 600px;
+         "
+          >
+      </div>
+
+      
+      <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+        <form #loginForm="ngForm" (ngSubmit)="login()">
+          <!--
+          <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
+            <p class="lead fw-normal mb-0 me-3">Sign in with</p>
+            <button type="button" class="btn btn-primary btn-floating mx-1">
+              <i class="fab fa-facebook-f"></i>
+            </button>
+
+            <button type="button" class="btn btn-primary btn-floating mx-1">
+              <i class="fab fa-twitter"></i>
+            </button>
+
+            <button type="button" class="btn btn-primary btn-floating mx-1">
+              <i class="fab fa-linkedin-in"></i>
+            </button>
+          </div> 
+
+          <div class="divider d-flex align-items-center my-4">
+            <p class="text-center fw-bold mx-3 mb-0">Or</p>
+          </div>
+          --->
+
+          <!-- Email input -->
+          <div class="form-outline mb-4">
+              <label class="form-label" for="form3Example3">Email address</label>
+
+              <input type="email" class="form-control" id="inputEmail4" placeholder="Email *" [(ngModel)]="user.email" [ngModelOptions]="{standalone : true}">
+          </div>
+
+          <!-- Password input -->
+          <div class="form-outline mb-3">
+              <label class="form-label" for="form3Example4">Password</label>
+
+              <input type="password" class="form-control" id="inputPassword4"
+              placeholder="Password *" [(ngModel)]="user.password" [ngModelOptions]="{standalone : true}">
+          </div>
+
+        
+
+          <div class="text-center text-lg-start mt-4 pt-2">
+            <button  class="gradient-button"
+              style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button>
+              <h1 *ngIf="notExist" class="text-danger">User not found</h1>
+
+          </div>
+
+        </form>
+      </div>
     </div>
-    <div class="form-group">
-      <label for="inputPassword">Password</label>
-      <input type="password" class="form-control" id="inputPassword" placeholder="Enter your password" [(ngModel)]="user.password" [ngModelOptions]="{standalone : true}" required>
-    </div>
-    <div class="form-group">
-      <button type="submit" class="btn btn-primary btn-block">Login</button>
-    </div>
-    <div *ngIf="notExist" class="alert alert-danger">User not found</div>
-  </form>
-</div>
+  </div>
+  
+</section>
 <app-footer></app-footer>
+

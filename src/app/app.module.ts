@@ -14,11 +14,10 @@ import { from } from 'rxjs';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminModule } from './admin/admin.module';
 import { DashboradUserComponent } from './component/dashborad-user/dashborad-user.component';
-import { DashboardUserCsrComponent } from './component/dashboard-user-csr/dashboard-user-csr.component';
-import { PaymentComponent } from './component/payment/payment.component';
+import { PayComponent } from './component/pay/pay.component';
 import { VipComponent } from './component/vip/vip.component';
-import { ContactusComponent } from './contactus/contactus.component';
-
+import { UserComponent } from './component/user/user.component';
+import { PaymentComponent } from './component/payment/payment.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -31,8 +30,6 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    VipComponent,
-    PaymentComponent,
     HomeComponent,
     FooterComponent,
     HeaderComponent,
@@ -41,8 +38,10 @@ const routes: Routes = [
     LoginComponent,
     TeamComponent,
     DashboradUserComponent,
-    DashboardUserCsrComponent,
-    ContactusComponent,
+    PayComponent,
+    VipComponent,
+    UserComponent,
+    PaymentComponent
    
   ],
   imports: [

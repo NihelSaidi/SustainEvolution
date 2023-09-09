@@ -5,23 +5,26 @@ import { AboutComponent } from './component/about/about.component';
 import { ContactComponent } from './component/contact/contact.component';
 import { LoginComponent } from './component/login/login.component';
 import { TeamComponent } from './component/team/team.component';
-import { DashboardUserCsrComponent } from './component/dashboard-user-csr/dashboard-user-csr.component';
 import { DashboradUserComponent } from './component/dashborad-user/dashborad-user.component';
-import { PaymentComponent } from './component/payment/payment.component';
+import { PayComponent } from './component/pay/pay.component';
 import { VipComponent } from './component/vip/vip.component';
-import { ContactusComponent } from './contactus/contactus.component';
+import { UserComponent } from './component/user/user.component';
+import { PaymentComponent } from './component/payment/payment.component';
 const routes: Routes = [
-  {path: '', component: HomeComponent},
-  {path:'about',component:AboutComponent},
-  {path: 'contact', component:ContactComponent},
-  {path:'login',component:LoginComponent},
-  {path:'team',component:TeamComponent},
-  {path:'dashboardCsr',component:DashboardUserCsrComponent},
-  {path:'dashboardUser',component:DashboradUserComponent},
-  {path:'vip',component:VipComponent},
-  {path:'contactus',component:ContactusComponent},
-  {path:'payment',component:PaymentComponent},
-  
+  { path: '', component: HomeComponent },
+  { path: 'about', component: AboutComponent },
+  { path: 'contact', component: ContactComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'team', component: TeamComponent },
+  { path: 'vip', component: VipComponent },
+  { path: 'paymenttype', component:  PaymentComponent },
+      { path: 'pay', component: PayComponent }, 
+      {path:'user',component:UserComponent},
+  {
+    path: 'dashboardUser',
+    component:DashboradUserComponent, // Correction ici
+   
+  },
 ];
 
 @NgModule({

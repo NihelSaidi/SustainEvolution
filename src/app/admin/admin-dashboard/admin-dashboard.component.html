@@ -45,46 +45,71 @@
             <!-- Divider -->
             <hr class="sidebar-divider">
 
-            <!-- Heading -->
-            <div class="sidebar-heading text-success">
-                Create User
+            <div class="row gutters-sm">
+                <div class="col-md-12 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex flex-column align-items-center text-center">
+                                <img src="../../../assets/img/nihel.png" alt="Admin"
+                                    class="rounded-circle" width="100">
+                                <div class="mt-3">
+                                    <h4>Nihel Saidi</h4>
+                                    <p class="text-secondary mb-1">Product Manager</p>
+                                    
+                                    <button class="btn btn-outline-info">Profile</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <!-- Heading -->
+                <div class="sidebar-heading text-success">
+                    Create User
+                </div>
+                <!-- create user -->
+                <li class="nav-item ">
+                    <a class="nav-link" routerLink='/admin/create'>
+                        <i class="fas fa-fw fa-tachometer-alt"></i>
+                        <h6 class="text-dark">Companie</h6>
+                    </a>
+
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" routerLink='/admin/createCSR'>
+                        <i class="fas fa-fw fa-tachometer-alt"></i>
+                        <h6 class="text-dark">Companie CSR</h6>
+                    </a>
+
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" routerLink='/admin/create'>
+                        <i class="fas fa-fw fa-tachometer-alt"></i>
+                        <h6 class="text-dark">Student</h6>
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" routerLink='/admin/create'>
+                        <i class="fas fa-fw fa-tachometer-alt"></i>
+                        <h6 class="text-dark">Supplier</h6>
+                    </a>
+                </li>
+                <div class="sidebar-heading text-success">
+                    Add Available Training
+                </div>
+                <li class="nav-item ">
+                    <a class="nav-link" routerLink='/admin/formation'>
+                        <i class="fas fa-fw fa-tachometer-alt"></i>
+                        <h6 class="text-dark">Free</h6>
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" routerLink='/admin/formation'>
+                        <i class="fas fa-fw fa-tachometer-alt"></i>
+                        <h6 class="text-dark">Paid</h6>
+                    </a>
+                </li>
             </div>
-            <!-- create user -->
-            <li class="nav-item ">
-                <a class="nav-link" routerLink='/admin/create'>
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <h6 class="text-dark">Companie</h6></a>
-                   
-            </li>
-            <li class="nav-item ">
-                <a class="nav-link" routerLink='/admin/createCSR'>
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <h6 class="text-dark">Companie CSR</h6></a>
-                   
-            </li>
-            <li class="nav-item ">
-                <a class="nav-link" routerLink='/admin/create'>
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <h6 class="text-dark">Student</h6></a>
-            </li>
-            <li class="nav-item ">
-                <a class="nav-link" routerLink='/admin/create'>
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <h6 class="text-dark">Supplier</h6></a>
-            </li>
-            <div class="sidebar-heading text-success">
-               Add Available Training
-            </div>
-            <li class="nav-item ">
-                <a class="nav-link" routerLink='/admin/formation'>
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <h6 class="text-dark">Free</h6></a>
-            </li>
-            <li class="nav-item ">
-                <a class="nav-link" routerLink='/admin/formation'>
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <h6 class="text-dark">Paid</h6></a>
-            </li>
         </ul>
         <!-- End of Sidebar -->
 
@@ -214,7 +239,7 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" routerLink='/admin/profile' id="userDropdown"
                                 role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Nihel Saidi</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Log Out</span>
 
 
                             </a>
@@ -247,11 +272,11 @@
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
-                <div class="dashboard-content" >
+                <div class="dashboard-content">
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        
+
                         <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-info shadow-sm"><i
                                 class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
                     </div>
@@ -324,6 +349,7 @@
                             </div>
                         </div>
 
+
                         <!-- Pending Requests Card Example -->
                         <div class="col-xl-3 col-md-6 mb-4">
                             <div class="card border-left-warning shadow h-100 py-2">
@@ -331,9 +357,9 @@
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <a class="nav-link" routerLink='/admin/demande'>
-                                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                                Pending Requests</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
+                                                <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                                    Pending Requests</div>
+                                                <div class="h5 mb-0 font-weight-bold text-gray-800">02</div>
                                             </a>
                                         </div>
                                         <div class="col-auto">
@@ -344,12 +370,126 @@
                             </div>
                         </div>
                     </div>
+                    <!-- page statustic card start -->
+                    <div class="row">
+                        <div class="col-lg-7 col-md-12">
+                            <!-- support-section start -->
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="card support-bar overflow-hidden">
+                                        <div class="card-body pb-0">
+                                            <h2 class="m-0">97%</h2>
+                                            <span class="text-c-blue"> The Company is not RSE</span>
+                                        </div>
+                                        <div id="support-chart"></div>
+                                        <div class="card-footer bg-primary text-white">
+                                            <div class="row text-center">
+                                                <div class="col"><a href="#" class="text-white m-b-0">
+                                                        <h4 class="m-0 text-white">27%</h4>
+                                                    </a>
+                                                    <span>Open</span>
+                                                </div>
+                                                <div class="col"><a href="#" class="text-white m-b-0">
+                                                        <h4 class="m-0 text-white">73%</h4>
+                                                        <span>Rejecting</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="card support-bar overflow-hidden">
+                                        <div class="card-body pb-0">
+                                            <h2 class="m-0">3%</h2>
+                                            <span class="text-c-green">The Company is RSE</span>
+                                        </div>
+                                        <div id="support-chart1"></div>
+                                        <div class="card-footer bg-success text-white">
+                                            <div class="row text-center">
+                                                <div class="col"><a href="#" class="text-white m-b-0">
+                                                        <h4 class="m-0 text-white">65%</h4>
+                                                        <span>Solved</span>
+                                                    </a>
+                                                </div>
+                                                <div class="col"><a href="#" class="text-white m-b-0">
+                                                        <h4 class="m-0 text-white">35%</h4>
+                                                        <span>Running </span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- support-section end -->
+                        </div>
+                        <div class="col-lg-5 col-md-12">
+                            <!-- page statustic card start -->
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="row align-items-center">
+                                                <div class="col-8">
+                                                    <h4 class="text-c-yellow">$30200</h4>
+                                                    <h6 class="text-muted m-b-0">All Earnings</h6>
+                                                </div>
+                                                <div class="col-4 text-right">
+                                                    <i class="  icon-bar-chart-2  f-28"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer bg-warning">
+                                            <div class="row align-items-center">
+                                                <div class="col-9">
+                                                    <p class="text-white m-b-0"> <a href="#"
+                                                            class="text-white m-b-0">View</a> </p>
+                                                </div>
+                                                <div class="col-3 text-right">
+                                                    <i class="  icon-trending-up text-white f-16"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="row align-items-center">
+                                                <div class="col-8">
+                                                    <h6 class="text-c-red">Tomorrow at 3 a.m </h6>
+                                                    <h6 class="text-muted m-b-0">Conference</h6>
+                                                </div>
+                                                <div class="col-4 text-right">
+                                                    <i class="  icon-calendar f-28"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer bg-danger">
+                                            <div class="row align-items-center">
+                                                <div class="col-9">
+                                                    <p class="text-white m-b-0"><a href="#"
+                                                            class="text-white m-b-0">View</a></p>
+                                                </div>
+                                                <div class="col-3 text-right">
+                                                    <i class="  icon-trending-down text-white f-16"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
 
+                            </div>
+                            <!-- page statustic card end -->
+                        </div>
+                    </div>
+                    <!-- page statustic card end -->
                     <!-- Free and not CSR -->
 
                     <main>
                         <section class="company-section">
-                            <h2 class="section-title">Companies</h2>
+                            <h2 class="section-title">Company List</h2>
                             <table class="table table-hover table-bordered">
                                 <thead>
                                     <tr>
@@ -365,7 +505,7 @@
                                 </tbody>
                             </table>
                         </section>
-                
+
                         <section class="training-section">
                             <h2 class="section-title">Training available</h2>
                             <table class="table table-hover table-bordered">
@@ -382,27 +522,30 @@
                                 </tbody>
                             </table>
                         </section>
-                
+
                         <section class="company-csr-section">
                             <h2 class="section-title">Companies CSR</h2>
-                            <table class="table table-hover table-bordered">
+                            <table>
                                 <thead>
                                     <tr>
                                         <th>Company Name</th>
                                         <th>Industry Sector *</th>
+                                        <th>Initiatives CSR</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr *ngFor="let p of users">
-                                        <td>{{p.companyName}}</td>
-                                        <td>{{p.industrySector}}</td>
+                                    <tr *ngFor="let r of csrUsers">
+                                        <td>{{r.companyName}}</td>
+                                        <td>{{r.industrySector}}</td>
+                                        <td>{{r.CSRInitiatives}}</td>
                                     </tr>
                                 </tbody>
                             </table>
                         </section>
-                
+
                         <section class="training-paid-section">
-                            <h2 class="section-title">Training available Paid</h2>
+
+                            <h2 class="section-title  ">Training available Paid</h2>
                             <table class="table table-hover table-bordered">
                                 <thead>
                                     <tr>
@@ -462,7 +605,7 @@
                                 </div>
                             </div>
 
-                            
+
 
                         </div>
 
@@ -475,7 +618,16 @@
                                 </div>
                                 <div class="card-body">
 
-                                    <p>Corporate Social Responsibility (CSR) is a business approach that goes beyond profit-making and emphasizes a company's responsibility to contribute positively to society and the environment. It involves integrating ethical and sustainable practices into the core business strategies, considering the impact on stakeholders, communities, and the planet. CSR encompasses various initiatives, such as supporting social causes, reducing environmental footprint, promoting diversity and inclusion, and ensuring ethical supply chains. By adopting CSR, companies not only contribute to the betterment of society but also enhance their reputation, build trust with customers, and drive long-term sustainable growth.</p>
+                                    <p>Corporate Social Responsibility (CSR) is a business approach that goes beyond
+                                        profit-making and emphasizes a company's responsibility to contribute positively
+                                        to society and the environment. It involves integrating ethical and sustainable
+                                        practices into the core business strategies, considering the impact on
+                                        stakeholders, communities, and the planet. CSR encompasses various initiatives,
+                                        such as supporting social causes, reducing environmental footprint, promoting
+                                        diversity and inclusion, and ensuring ethical supply chains. By adopting CSR,
+                                        companies not only contribute to the betterment of society but also enhance
+                                        their reputation, build trust with customers, and drive long-term sustainable
+                                        growth.</p>
                                     <button type="button" class="btn btn-light"> Edit Information </button>
                                 </div>
                             </div>
@@ -504,13 +656,55 @@
             <!-- End of Main Content -->
 
             <!-- Footer -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Sustain Evolution</span>
-                    </div>
+            
+
+                <footer class="bg-white text-center text-dark">
+                <!-- Grid container -->
+                <div class="container p-4 pb-0">
+                  <!-- Section: Social media -->
+                  <section class="mb-4">
+                    <!-- Facebook -->
+                    <a class="btn btn-outline-success btn-floating m-1" href="#!" role="button"
+                      ><i class="fab fa-facebook-f"></i
+                    ></a>
+              
+                    <!-- Twitter -->
+                    <a class="btn btn-outline-success btn-floating m-1" href="#!" role="button"
+                      ><i class="fab fa-twitter"></i
+                    ></a>
+              
+                    <!-- Google -->
+                    <a class="btn btn-outline-success btn-floating m-1" href="#!" role="button"
+                      ><i class="fab fa-google"></i
+                    ></a>
+              
+                    <!-- Instagram -->
+                    <a class="btn btn-outline-success btn-floating m-1" href="#!" role="button"
+                      ><i class="fab fa-instagram"></i
+                    ></a>
+              
+                    <!-- Linkedin -->
+                    <a class="btn btn-outline-success btn-floating m-1" href="#!" role="button"
+                      ><i class="fab fa-linkedin-in"></i
+                    ></a>
+              
+                    <!-- Github -->
+                    <a class="btn btn-outline-success btn-floating m-1" href="#!" role="button"
+                      ><i class="fab fa-github"></i
+                    ></a>
+                  </section>
+                  <!-- Section: Social media -->
                 </div>
-            </footer>
+                <!-- Grid container -->
+              
+                <!-- Copyright -->
+                <div class="text-center p-3" style="background-color: rgb(255, 251, 251);">
+                  © 2023 Copyright: sustain evolution
+                </div>
+                <!-- Copyright -->
+              </footer>
+                
+            
             <!-- End of Footer -->
 
         </div>

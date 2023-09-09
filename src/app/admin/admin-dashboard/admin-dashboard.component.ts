@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
 })
 export class AdminDashboardComponent {
   users : any;
+  csrUsers:any;
   connectedUser :any;
   formations:any;
   constructor(private router : Router) { }
@@ -15,9 +16,11 @@ export class AdminDashboardComponent {
     // Retrieve user data from local storage
     this.users = JSON.parse(localStorage.getItem('users') || "[]");
     this.connectedUser = JSON.parse(localStorage.getItem("connectedUser") || "{}");
-  
+    this.csrUsers = JSON.parse(localStorage.getItem('csrUsers') || "[]");
+
     console.log(this.users);
     console.log(this.formations);
+    console.log(this.csrUsers);
   }  
   isAuthenticated: boolean = false;
 

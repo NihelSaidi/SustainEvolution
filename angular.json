@@ -178,9 +178,11 @@
               "projects/admin-page/src/assets"
             ],
             "styles": [
+              "node_modules/font-awesome/css/font-awesome.css",
               "projects/admin-page/src/styles.css"
             ],
-            "scripts": []
+      
+             "scripts": []
           }
         }
       }

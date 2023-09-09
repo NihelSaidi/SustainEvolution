@@ -1,6 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { environment } from 'src/environments/environment';
-import { loadStripe, Stripe } from '@stripe/stripe-js';
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-payment',
@@ -8,22 +7,28 @@ import { Router } from '@angular/router';
   styleUrls: ['./payment.component.css']
 })
 export class PaymentComponent  {
-  cardNumber: string='';
-  expiry: string='';
-  cvv: string='';
-  errorMessage: string='';
-
-  constructor(private router: Router) {}
-
-  submitForm() {
-    // Simulate payment validation
-    if (this.cardNumber === '5579401423082988' && this.expiry === '08/24' && this.cvv === '200') {
-      // Payment success
-      localStorage.setItem('paymentStatus', 'success');
-      this.router.navigate(['/vip']); // Redirect to VIP page
-    } else {
-      // Payment error
-      this.errorMessage = 'Payment failed. Please check your card details and try again.';
+    selectedPaymentType: string = ''; // This property stores the selected payment type
+  
+    constructor(private router: Router) { }
+  
+    onSubmit() {
+      // Depending on the selected payment type, navigate to the appropriate payment page
+      switch (this.selectedPaymentType) {
+        case 'bankCard':
+          this.router.navigate(['/pay']);
+          break;
+        case 'masterCard':
+          this.router.navigate(['/pay']);
+          break;
+        case 'paypal':
+          this.router.navigate(['/pay']);
+          break;
+        default:
+          // Handle other cases or show an error message
+          break;
+      }
     }
   }
-}
+  
+
+
